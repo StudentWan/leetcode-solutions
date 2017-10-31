@@ -11,6 +11,7 @@ You may assume that each input would have exactly one solution, and you may not 
     Given nums = [2, 7, 11, 15], target = 9,
 
     Because nums[0] + nums[1] = 2 + 7 = 9,
+    
     return [0, 1].
 
 ### 代码及思路
@@ -19,7 +20,7 @@ You may assume that each input would have exactly one solution, and you may not 
 /* 
 这个算法的复杂度是O(n)。
 
-采用的是哈希表来实现，运用Java中的HashMap类。
+采用的是HashMap(散列表)来实现，运用Java中的HashMap类。
 
 我最开始想到的思路是遍历两遍数组，得到一个O(n^2)的算法，并不优秀。
 
