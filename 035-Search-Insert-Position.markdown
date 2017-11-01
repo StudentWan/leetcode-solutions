@@ -46,6 +46,13 @@ public int searchInsert(int[] nums, int target) {
 #### 学习到的代码及思路：
 
 ```java
+/*
+本算法的时间复杂度也是O(n)，但是更加精简，实际上没有遍历数组。
+
+这个算法的思路是二分查找，很好理解。
+
+在有序列表中使用二分查找是很好的思路，以后撸题的时候应该注意。
+*/
 public int searchInsert(int[] nums, int target) {
         int low = 0, high = A.length-1;
         while(low<=high){
