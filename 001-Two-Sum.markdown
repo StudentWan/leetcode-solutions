@@ -26,7 +26,7 @@ You may assume that each input would have exactly one solution, and you may not 
 
 这个算法的思路是：
 
-由于each input would have exactly one solution，并且you may not use the same element twice，所以作为答案的元素1肯定在可以数组中找到同样作为答案的元素2
+由于each input would have exactly one solution，并且you may not use the same element twice，所以作为答案的元素1肯定在可以数组中找到同样作为答案的元素2。
 
 于是遍历数组，如果target与遍历到的元素的差值不在HashMap中，就将该元素与其索引加入到HashMap中。
 
