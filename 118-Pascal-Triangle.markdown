@@ -63,7 +63,9 @@ Return
 
     它的优秀之处在于作者很明显对Java的数据结构掌握的更熟练，运用一个临时列表模拟了杨辉三角的相邻两列
 
-    j每次循环前tempRes是在上一列的前缀上放一个1，j每次循环后tempRes就是那一列杨辉三角的结果
+    j每次循环前tempRes是在上一列的前缀上放一个1，作为这一次循环结果最左边的1，然后从第二位开始，两两相加并替换，以得到这一次循环结果各对应位上的值。
+
+    优秀之处在于空间复杂度仅为O(n)，不需要额外分配多余空间。
     */
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<List<Integer>>();
