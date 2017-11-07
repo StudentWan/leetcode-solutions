@@ -47,5 +47,21 @@ If you were only permitted to complete at most one transaction (ie, buy one and 
 #### 学习到的代码及思路：
 
 ```java
+    /*
+    这个算法的思路也是采用Kadane算法的思路，不过它的解法更简洁。
 
+    它利用的一个原理是：
+
+    arr[i] - arr[j] = arr[i] - arr[i - 1] + arr[i - 1] - arr[i - 2].... + arr[j + 1] - arr[j] (这里假设i >= j+2)
+
+    如果arr[i] - arr[j] 小于0，就说明arr[i]小于arr[j]，则舍弃掉之前的值（设为0），从i开始重新计算，arr[i]是全新的最小值。
+    */
+    public int maxProfit(int[] prices) {
+        int maxCur = 0, maxSoFar = 0;
+        for(int i = 1; i < prices.length; i++) {
+            maxCur = Math.max(0, maxCur += prices[i] - prices[i-1]);
+            maxSoFar = Math.max(maxCur, maxSoFar);
+        }
+        return maxSoFar;
+    }
 ```
