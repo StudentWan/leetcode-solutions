@@ -69,7 +69,7 @@ Note: The solution set must not contain duplicate triplets.
 
 ```java
     /*
-    本算法的时间复杂度是确切的O(n)
+    本算法的时间复杂度是确切的O(n^2)
 
     想法同样是将求a + b + c = 0转化为求 b + c = 0 - a的Two Sum问题
 
