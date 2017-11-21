@@ -97,6 +97,8 @@ return `[3, 4]`.
     然后再通过该函数，求第一个大于等于target + 1的值的索引，由于数组元素都是整数，所以这个索引减去1就一定是end。
 
     如此就找到了[start, end]。
+
+    学到的思想是，二分查找是可以通过条件限制，精确限定部分查找位置的情况的，在以后的解题中要注意。
     */
     public int[] searchRange(int[] nums, int target) {
         int start = Solution.searchEqualOrGreater(nums, target);
