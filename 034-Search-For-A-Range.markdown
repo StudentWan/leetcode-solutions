@@ -79,3 +79,44 @@ return `[3, 4]`.
         return res;
     }
 ```
+
+#### 学习到的代码及思路：
+
+```java
+    /*
+    本算法的时间复杂度为O(log2n)
+
+    想法就是设计一个函数，该函数通过二分查找寻找第一个大于或等于target的元素的索引。
+
+    如果target不是大于nums中的所有数的话，那么hi一定是大于等于target的，于是当lo >= hi 时，nums[lo]一定大于等于target。
+
+    而又由于当nums[mid] < target时，lo总是等于mid + 1的，所以nums[lo]一定是第一个大于等于target的值（除非target大于数组中所有值，这样lo会走到nums.length）。
+
+    所以我们先通过该函数寻找start，如果start等于数组长度，或者大于target，证明没有找到target，返回[-1, -1]
+
+    然后再通过该函数，求第一个大于等于target + 1的值的索引，由于数组元素都是整数，所以这个索引减去1就一定是end。
+
+    如此就找到了[start, end]。
+    */
+    public int[] searchRange(int[] nums, int target) {
+        int start = Solution.searchEqualOrGreater(nums, target);
+        if (start == nums.length || nums[start] > target) {
+            return new int[]{-1, -1};
+        }
+        return new int[] {start, Solution.searchEqualOrGreater(nums, target + 1) - 1};
+    }
+
+    private static int searchEqualOrGreater(int[] nums, int target) {
+        int lo = 0;
+        int hi = nums.length;
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            if (nums[mid] < target) {
+                lo = mid + 1;
+            } else {
+                hi = mid;
+            }
+        }
+        return lo;
+    }
+```
