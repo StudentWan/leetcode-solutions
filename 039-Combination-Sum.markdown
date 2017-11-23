@@ -33,6 +33,10 @@ A solution set is:
     通过递归来确保迭代的添加元素进入结果中，也由于按序迭代的问题，并不会出现重复的情况。
 
     需要注意的是，在上一个迭代情况完毕并返回后，在进入下一个迭代情况前，将上一个迭代中加入到存储列表的元素给去除掉，这样才不会出错。
+
+    2017/11/24记录：
+
+    这原来是深度优先搜索（DFS）...，
     */
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
