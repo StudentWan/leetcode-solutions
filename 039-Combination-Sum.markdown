@@ -36,7 +36,7 @@ A solution set is:
 
     2017/11/24记录：
 
-    这原来是深度优先搜索（DFS）...，
+    这原来是深度优先搜索（DFS）...，即对每一个可能的分支深入到不能再深入为止，然后回溯。
     */
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();

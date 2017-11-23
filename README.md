@@ -4,9 +4,9 @@
 
 主要会记录解题思路
 
-Coding语言计划使用Java
+Coding语言：Java
 
-下周开始更新
+开始时间：2017/10/30
 
 ### 解题方法
 刷题顺序：按照leetcode tag顺序来刷，从easy到medium到hard
