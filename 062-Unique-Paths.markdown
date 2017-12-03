@@ -8,7 +8,13 @@ The robot can only move either down or right at any point in time. The robot is 
 
 How many possible unique paths are there?
 
-[robot_maze](./imgs/robot_maze.png)
+![robot_maze](./imgs/robot_maze.png)
+
+Above is a 3 x 7 grid. How many possible unique paths are there?
+
+`Note`: m and n will be at most 100.
+
+
 
 ### 代码及思路：
 
