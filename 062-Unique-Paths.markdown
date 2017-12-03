@@ -8,6 +8,8 @@ The robot can only move either down or right at any point in time. The robot is 
 
 How many possible unique paths are there?
 
+[robot_maze](./imgs/robot_maze.png)
+
 ### 代码及思路：
 
 #### 我的代码及思路：
