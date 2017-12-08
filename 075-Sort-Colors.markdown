@@ -52,6 +52,37 @@ You are not suppose to use the library's sort function for this problem.
     }
 ```
 
+#### 我的代码及思路2：
+
+```java
+    /*
+    思路见：http://danielwan.me/2017/12/dutch-national-flag-problem.html
+    */
+    public void sortColors(int[] nums) {
+        int n = nums.length;
+        int left = 0;
+        int right = n - 1;
+        int i = 0;
+        
+        while (i <= right) {
+            if (nums[i] == 0) {
+                nums[i] = nums[left];
+                nums[left] = 0;
+                i++;
+                left++;
+            }
+            else if (nums[i] == 2) {
+                nums[i] = nums[right];
+                nums[right] = 2;
+                right--;
+            }
+            else {
+                i++;
+            }
+        }
+    }
+```
+
 #### 学习到的代码及思路：
 
 ```java
