@@ -46,9 +46,11 @@ The array may contain duplicates.
 
     如果nums[lo] < nums[mid]，那么mid左边一定是有序的，这时如果target在nums[lo]和nums[mid]之间，则转换成有序数组的二分查找了。
 
-    如果nums[lo] > nums[mid]，那么mid右边一定是有序的，这时如果target小于nums[mid]和nums[hi]之间，则转换成有序数组的二分查找了。
+    如果nums[lo] > nums[mid]，那么mid右边一定是有序的，这时如果target在nums[mid]和nums[hi]之间，则转换成有序数组的二分查找了。
 
     如果nums[lo] == nums[mid]，则可以直接丢弃掉nums[lo]了，这种情况就是duplicates给算法带来的性能损失。
+
+    时间复杂度为O(log2n)。
     */
     public boolean search(int[] nums, int target) {
         if (nums.length == 0) return false;
