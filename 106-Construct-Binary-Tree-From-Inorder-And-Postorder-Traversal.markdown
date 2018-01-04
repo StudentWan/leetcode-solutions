@@ -42,4 +42,3 @@ You may assume that duplicates do not exist in the tree.
         return root;
     }
 ```
-
