@@ -9,7 +9,7 @@ Coding语言：Java
 开始时间：2017/10/30
 
 ### 解题方法
-刷题顺序：按照leetcode tag顺序来刷，从easy到medium到hard
+刷题顺序：按照leetcode tag顺序来刷，从easy到medium~~到hard~~ (2018-02-24，决定先刷完前200中的easy和medium，掌握基本的解题思路)
 
 coding办法：白板撸码
 
@@ -19,7 +19,7 @@ coding办法：白板撸码
 
 ### Stage 1
 
-目标： 前200题
+目标： 前200题中的easy和medium
 
 ### Stage 2
 
