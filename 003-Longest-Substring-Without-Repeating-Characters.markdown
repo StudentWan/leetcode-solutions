@@ -71,7 +71,7 @@ Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the ans
         for(int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (store.containsKey(c)) {
-                if (restart <= store.get(c)) {
+                if (restart < store.get(c)) {
                     restart = store.get(c);
                     count = i - restart - 1;
                 }
