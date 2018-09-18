@@ -42,7 +42,7 @@
     迭代r = r - (r^2 - x) / 2r,
     即r = (r + x / r) / 2
     逐渐逼近r0
-    但是为什么会收敛到floor(r0)有点没想明白
+    但是为什么会收敛到floor(r0)有点没想明白 后注：思考曲线形状
     */
     public int mySqrt(int x) {
         long r = x;
