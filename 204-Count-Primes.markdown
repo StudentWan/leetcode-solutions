@@ -1,4 +1,4 @@
-#### Sieve of Erathosthenas
+#### Sieve of Erathosthenes
 
 ```c++
 class Solution {
