@@ -1,41 +1,21 @@
 #### DFS
 
 ```JS
-/**
- * // Definition for a Node.
- * function Node(val,left,right,next) {
- *    this.val = val;
- *    this.left = left;
- *    this.right = right;
- *    this.next = next;
- * };
- */
-/**
- * @param {Node} root
- * @return {Node}
- */
 var connect = function(root) {
-    recur(root, null);
-    return root;
-};
-
-var recur = function(left, right) {
-    if (left !== null && right === null) {
-        recur(left.left, left.right);
-        return ;
-    }
-    if (left === null && right === null) {
-        return ;
+    if (root === null) {
+        return root;
     }
     
-    left.next = right;
-    if (left.left !== null) {
-        recur(left.left, left.right);
-        recur(left.right, right.left);
-        recur(right.left, right.right);
+    if (root.left) {
+        root.left.next = root.right;
+        if (root.next) {
+            root.right.next = root.next.left;
+        }
     }
-    return;
-}
+    connect(root.left);
+    connect(root.right);
+    return root;
+};
 ```
 
 #### 逐层遍历
