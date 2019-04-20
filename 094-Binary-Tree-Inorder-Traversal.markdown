@@ -78,3 +78,29 @@ return `[1,3,2]`.
         return result;
     }
 ```
+
+#### More concise Iteration
+
+```js
+/**
+ * 巧妙地利用了栈后进先出的特性模拟中序遍历过程。
+ * 总是找到最左子树。
+ */
+var inorderTraversal = function(root) {
+    const res = [];
+    const stack = [];
+    let cur = root;
+    let tmp;
+    while (cur !== null || stack.length > 0) {
+      if (cur !== null) {
+        stack.push(cur);
+        cur = cur.left;
+      } else {
+        tmp = stack.pop();
+        res.push(tmp.val);
+        cur = tmp.right;
+      }
+    }
+    return res;
+};
+```
