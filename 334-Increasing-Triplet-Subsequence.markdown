@@ -22,7 +22,7 @@ var increasingTriplet = function(nums) {
 
 #### 分段递减法
 
-再一次遍历中将nums分段，并递减最小值和次小值，如果成功分得3段返回true，否则返回false。
+在一次遍历中将nums分段，并递减最小值和次小值，如果成功分得3段返回true，否则返回false。
 
 ```js
 var increasingTriplet = function(nums) {
